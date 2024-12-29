@@ -7,7 +7,19 @@ To run the test manually, you can
 ```
 cd back-end
 ```
-2. Run all tests
+2. Create a new python virtual environment
+```
+python -m venv newenv
+```
+python -m venv newenv
+```
+```
+source newenv/bin/activate
+```
+```
+pip install Flask
+```
+4. Run all tests
 ```
 python3 -m unittest discover -s test -p "*.py"
 ```
