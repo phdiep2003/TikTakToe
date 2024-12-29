@@ -1,0 +1,10 @@
+back-end/main/myenv/
+
+# Other files/folders to ignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
