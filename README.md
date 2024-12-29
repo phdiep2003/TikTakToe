@@ -11,8 +11,6 @@ cd back-end
 ```
 python -m venv newenv
 ```
-python -m venv newenv
-```
 ```
 source newenv/bin/activate
 ```
