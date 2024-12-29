@@ -1,0 +1,36 @@
+name: Python Tests
+
+on: 
+  push:
+    branches: 
+      - main  # Change this to your default branch if necessary
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # The OS on which the workflow will run
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.13'  # Specify the Python version you want to use
+
+      - name: Create virtual environment
+        run: |
+          python -m venv myenv
+          source myenv/bin/activate
+
+      - name: Install dependencies
+        run: |
+          source myenv/bin/activate
+          pip install --upgrade pip
+          pip install Flask  # You can also use requirements.txt if you have one
+
+      - name: Run tests
+        run: |
+          source myenv/bin/activate
+          python -m unittest discover -s test -p "*.py"
